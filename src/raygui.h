@@ -1413,6 +1413,7 @@ static bool guiStyleLoaded = false;         // Style loaded flag for lazy style 
 // To use raygui as standalone library, below functions must be defined by the user
 //----------------------------------------------------------------------------------
 #if defined(RAYGUI_STANDALONE)
+static float TextToFloat(const char *text);         // Get float value from text
 
 #define KEY_RIGHT           262
 #define KEY_LEFT            263
@@ -1469,7 +1470,6 @@ static bool CheckCollisionPointRec(Vector2 point, Rectangle rec);   // Check if 
 static const char *TextFormat(const char *text, ...);               // Formatting of text with variables to 'embed'
 static const char **TextSplit(const char *text, char delimiter, int *count);    // Split text into multiple strings
 static int TextToInteger(const char *text);         // Get integer value from text
-static float TextToFloat(const char *text);         // Get float value from text
 
 static int GetCodepointNext(const char *text, int *codepointSize);  // Get next codepoint in a UTF-8 encoded text
 static const char *CodepointToUTF8(int codepoint, int *byteSize);   // Encode codepoint into UTF-8 text (char array size returned as parameter)

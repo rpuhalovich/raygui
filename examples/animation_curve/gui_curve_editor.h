@@ -533,8 +533,6 @@ void GuiCurveEditor(GuiCurveEditorState *state, Rectangle bounds)
 
             const Vector2 screenC1 = (Vector2){ c1.x*innerBounds.width + innerBounds.x, innerBounds.y + innerBounds.height - c1.y*innerBounds.height };
             const Vector2 screenC2 = (Vector2){ c2.x*innerBounds.width + innerBounds.x, innerBounds.y + innerBounds.height - c2.y*innerBounds.height };
-
-            DrawSplineSegmentBezierCubic(screenPos1, screenC1, screenC2, screenPos2, 1, curveColor);
         }
     }
 }

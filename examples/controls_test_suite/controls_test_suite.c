@@ -247,12 +247,12 @@ int main()
 
             // Third GUI column
             GuiPanel((Rectangle){ 320, 25, 225, 140 }, "Panel Info");
-            GuiColorPicker((Rectangle){ 320, 185, 196, 192 }, NULL, &colorPickerValue);
+            GuiColorPicker((Rectangle){ 320, 185, 196, 192 }, &colorPickerValue);
 
             //GuiDisable();
             GuiSlider((Rectangle){ 355, 400, 165, 20 }, "TEST", TextFormat("%2.2f", sliderValue), &sliderValue, -50, 100);
             GuiSliderBar((Rectangle){ 320, 430, 200, 20 }, NULL, TextFormat("%i", (int)sliderBarValue), &sliderBarValue, 0, 100);
-            
+
             GuiProgressBar((Rectangle){ 320, 460, 200, 20 }, NULL, TextFormat("%i%%", (int)(progressValue*100)), &progressValue, 0.0f, 1.0f);
             GuiEnable();
 
@@ -261,9 +261,9 @@ int main()
             GuiScrollPanel((Rectangle){ 560, 25, 102, 354 }, NULL, (Rectangle){ 560, 25, 300, 1200 }, &viewScroll, &view);
 
             Vector2 mouseCell = { 0 };
-            GuiGrid((Rectangle) { 560, 25 + 180 + 195, 100, 120 }, NULL, 20, 3, &mouseCell);
+            GuiGrid((Rectangle) { 560, 25 + 180 + 195, 100, 120 }, 20, 3, &mouseCell);
 
-            GuiColorBarAlpha((Rectangle){ 320, 490, 200, 30 }, NULL, &alphaValue);
+            GuiColorBarAlpha((Rectangle){ 320, 490, 200, 30 }, &alphaValue);
 
             GuiSetStyle(DEFAULT, TEXT_ALIGNMENT_VERTICAL, TEXT_ALIGN_TOP);   // WARNING: Word-wrap does not work as expected in case of no-top alignment
             GuiSetStyle(DEFAULT, TEXT_WRAP_MODE, TEXT_WRAP_WORD);            // WARNING: If wrap mode enabled, text editing is not supported
